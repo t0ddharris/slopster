@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="slopster-hero.png" alt="Slopster" width="700" />
+</p>
+
 # Slopster
 
 Catch AI slop in your writing before you publish it.
