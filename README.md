@@ -21,7 +21,7 @@ Five YAML rules that plug into [Vale](https://vale.sh), the open-source prose li
 | `WeakWords` | Filler and hedge words: `very`, `basically`, `furthermore`, `at its core` | Warning |
 | `EmDash` | More than 3 em dashes per document (LLMs overuse them) | Warning |
 
-**Tagore skill** (for Claude Code, Codex, Cursor, Windsurf, and other AI coding agents)
+**[Tagore](https://github.com/apurvrdx1/tagore) skill** (for Claude Code, Codex, Cursor, Windsurf, and other AI coding agents)
 A 29-pattern detection catalog combined with an 8-dimension scoring rubric. Goes deeper than lint: it scores prose on directness, rhythm, trust, authenticity, density, specificity, restraint, and voice. Fails anything below 56/80. Built from [humanizer](https://github.com/blader/humanizer) by blader and [stop-slop](https://github.com/hardikpandya/stop-slop) by Hardik Pandya.
 
 **slop-diff** (CI/branch-level detection)
@@ -31,33 +31,15 @@ A TypeScript script that compares your branch against main and reports only *new
 
 ### Vale rules (recommended starting point)
 
-1. [Install Vale](https://vale.sh/docs/install)
-
-2. Copy the style into your project:
 ```bash
-# clone and copy
+# Install Vale (https://vale.sh/docs/install), then:
 git clone https://github.com/t0ddharris/slopster.git
 cp -r slopster/styles your-project/
-```
-
-3. Add or update your `.vale.ini`:
-```ini
-StylesPath = styles
-MinAlertLevel = warning
-Vocab = Slopster
-
-[*.md]
-BasedOnStyles = Slopster
-```
-
-4. Run it:
-```bash
+cp slopster/.vale.ini your-project/   # or merge with your existing .vale.ini
 vale your-file.md
 ```
 
 ### Tagore skill (AI coding agents)
-
-Copy the skill into your agent's skill directory:
 
 ```bash
 # Claude Code
@@ -67,19 +49,14 @@ cp -r slopster/skills/tagore ~/.claude/skills/
 cp -r slopster/skills/tagore ~/.codex/skills/
 ```
 
-Then ask your agent to "run tagore on this draft" or "humanize this text."
+Then ask your agent to "run tagore on this draft."
 
 ### slop-diff (CI integration)
 
 ```bash
-cd your-project
+npm i -g slop-scan    # one-time dependency
 bun run /path/to/slopster/tools/slop-diff.ts          # diff against main
 bun run /path/to/slopster/tools/slop-diff.ts develop   # diff against another branch
-```
-
-Requires `slop-scan` installed globally:
-```bash
-npm i -g slop-scan
 ```
 
 ## Customization
@@ -144,7 +121,7 @@ Vale catches the mechanical stuff (banned words, jargon, em dashes). Tagore catc
 
 ## Credits
 
-Slopster's Tagore skill is built from two open-source projects:
+**[Tagore](https://github.com/apurvrdx1/tagore)** is an independent skill that Slopster bundles. It's built from two open-source projects:
 
 - **[humanizer](https://github.com/blader/humanizer)** by blader — 29-pattern catalog of AI writing tells, based on [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) (WikiProject AI Cleanup)
 - **[stop-slop](https://github.com/hardikpandya/stop-slop)** by Hardik Pandya — 8 core principles, 12-item pre-delivery checklist, and the 1-10 scoring rubric
