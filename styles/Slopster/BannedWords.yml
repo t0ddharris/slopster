@@ -36,4 +36,6 @@ tokens:
   - "unleash the potential of"
   - "unleash the possibilities of"
   - "full potential"
+  - 'quiet\w*'
+  - 'sharp\w*'
   - "There are two versions"
