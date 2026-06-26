@@ -39,3 +39,7 @@ tokens:
   - 'quiet\w*'
   - 'sharp\w*'
   - "There are two versions"
+  - "nobody warns you about"
+  - "nobody tells you about"
+  - "no one warns you about"
+  - "no one tells you about"
