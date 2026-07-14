@@ -53,8 +53,8 @@ Before any pattern-matching, hold these six properties in mind. Every revision s
 2. **Specificity.** Real names, numbers, places, the actual thing. Not "industry observers note" — *who*, *when*, *where*. Not "the implications are significant" — *which* implication.
 3. **Stakes.** The writer cares about something. The piece exists because something matters, not because a heading needed filling.
 4. **Active subjects.** People do things. Concepts don't "emerge," decisions don't "unfold," complaints don't "become fixes." Find the actor and put them at the front.
-5. **Varied rhythm.** Sentence lengths differ. Paragraphs end differently. Sometimes a fragment. Sometimes a sentence that takes its time getting where it's going. Mix it up.
-6. **Trust in the reader.** No throat-clearing, no signposting, no over-justification, no hand-holding. State the thing and move on.
+5. **Varied rhythm.** Sentence lengths differ. Paragraphs end differently. Sometimes a fragment. Sometimes a sentence that takes its time getting where it's going. Mix it up. Watch for the **mic-drop metronome**: every sentence landing as a finished, evenly-weighted verdict and every paragraph ending on a crisp aphorism. It survives length-variation and slips past the pattern catalog, so test it directly — read the last sentence of each paragraph in sequence, and three or more short declarative verdicts in a row means rewrite. One interaction to watch: stripping a negation pivot ("X, not Y") and replacing it with a standalone verdict feeds this metronome. Soften the replacement or fold it into an adjacent sentence.
+6. **Trust in the reader.** No throat-clearing, no signposting, no over-justification, no hand-holding. State the thing and move on. Go further: let the reader arrive at the point before you spell it out, and leave the last inch for them to close ("you probably saw that coming"). Spelling out what the reader already grasped is itself the tell.
 
 Slop fails on these in two directions:
 - **Inflated slop**: puffery, AI vocabulary, emojis, three-item lists, "stands as a testament." Catalog patterns 1–29 below catch these.
