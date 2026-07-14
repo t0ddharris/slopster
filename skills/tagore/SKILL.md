@@ -58,7 +58,7 @@ Before any pattern-matching, hold these six properties in mind. Every revision s
 
 Slop fails on these in two directions:
 - **Inflated slop**: puffery, AI vocabulary, emojis, three-item lists, "stands as a testament." Catalog patterns 1–29 below catch these.
-- **Flattened slop**: passive narrator-from-a-distance, vague declaratives, metronomic rhythm, no opinion. The 8 core principles below catch these.
+- **Flattened slop**: passive narrator-from-a-distance, vague declaratives, metronomic rhythm, confiding-insight openers, amplifier paragraphs, no opinion. This is the harder direction: every sentence can be mechanically clean and the piece still reads as AI, so a high mechanics score does not clear it. The 8 core principles below, plus the delete-test in Stage 1b, catch these.
 
 A frontier model needs both attacks running simultaneously.
 
@@ -116,7 +116,7 @@ Apply these as you rewrite. They are the operating system.
 
 5. **Put the reader in the room.** No narrator-from-a-distance voice. "You" beats "People." Specifics beat abstractions.
 
-6. **Vary rhythm.** Mix sentence lengths. Two items beat three. End paragraphs differently. No em dashes.
+6. **Vary rhythm.** Mix sentence lengths. Two items beat three. End paragraphs differently. No em dashes. Run the mic-drop test: read each paragraph's final sentence in sequence; three or more short declarative verdicts in a row is the metronome, so rewrite. Length-variation alone does not fix it — the tell is every sentence landing as a finished verdict.
 
 7. **Trust readers.** State facts directly. Skip softening, justification, hand-holding.
 
@@ -133,6 +133,8 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 - No opinions, just neutral reporting
 - No acknowledgment of uncertainty or mixed feelings
 - No first-person perspective when appropriate
+- **Amplifier paragraphs**: a paragraph that only restates a point already made, dressed in a balanced antithesis, an anaphoric triple, and a tidy landing. It reads as insight and advances nothing. Run the delete-test: cut the paragraph and check whether the argument loses anything. If not, it was filler — a paragraph that shouldn't exist. You cannot cadence-fix filler; polishing it only makes the slop more convincing.
+- **Confiding-insight openers**: "here's the hidden truth" / "what nobody tells you" / "this part never makes it into the job description." This is a *shape*, not a fixed phrase, so it survives rewording off any banned string. If a line promises a secret before delivering it, cut the promise and state the thing.
 - No humor, no edge, no personality
 - Reads like a Wikipedia article or press release
 
