@@ -9,7 +9,8 @@ description: |
   a 29-pattern catalog of AI tells (from humanizer) plus an 8-rule operating
   system with an 8-dimension scoring gate (extending stop-slop). Use when
   drafting, editing, or reviewing any prose: essays, posts, docs, reports,
-  emails. Detects and removes inflated symbolism, promotional language,
+  emails. Enforces Orwell's six rules of writing as a mandatory gate on every
+  draft. Detects and removes inflated symbolism, promotional language,
   superficial -ing analyses, vague attributions, em dash overuse, rule of
   three, AI vocabulary, passive voice, negative parallelisms, filler phrases,
   inanimate-verb constructions, narrator-from-a-distance voice, and metronomic
@@ -64,12 +65,28 @@ A frontier model needs both attacks running simultaneously.
 
 ---
 
+## Orwell's Six Rules (mandatory, unskippable)
+
+These override everything below. No draft leaves this skill until all six hold. If a stage of the pipeline produces text that breaks one, the pipeline is wrong and the rule wins.
+
+1. **Never use a metaphor, simile, or figure of speech you are used to seeing in print.** If you have read the phrase before, cut it. Invent the image or drop it.
+2. **Never use a long word where a short one will do.**
+3. **If it is possible to cut a word out, always cut it out.**
+4. **Never use the passive voice where you can use the active.**
+5. **Never use a foreign phrase, a scientific word, or a jargon word if you can think of an everyday English equivalent.**
+6. **Break any of these rules sooner than say anything outright barbarous.** Rule 6 is the only exemption, and it is not a loophole: use it when obeying rules 1 through 5 would produce something clumsy, false, or unclear. Name the rule you broke and why in the change summary.
+
+Rule 3 is the one most often skipped. Test it per sentence: delete each word in turn and check whether the sentence still says the same thing. If it does, the word stays deleted.
+
+---
+
 ## The Pipeline
 
 Run every job through these stages. Skipping the audit and scoring stages is what produces "clean but soulless" output.
 
 ```
 0. (Optional) Voice calibration from sample
+0b. Orwell's six rules — mandatory, applied at every stage below
 1. Draft rewrite — apply the 8 core principles, scrub the 29 patterns
 2. Pre-delivery checklist — 12 mechanical yes/no checks
 3. Score 1–10 on eight dimensions (5 mechanics + 3 substance, revise if < 56/80)
@@ -472,6 +489,10 @@ Run these as mechanical yes/no checks on the draft. Any "yes" triggers a revisio
 - Vague declarative ("The implications are significant")? Name the specific implication.
 - Narrator-from-a-distance ("Nobody designed this")? Put the reader in the scene.
 - Meta-joiners ("The rest of this essay...")? Delete. Let the essay move.
+- Any figure of speech you have seen in print before? Cut it (Orwell 1).
+- Any long word where a short one works? Swap it (Orwell 2).
+- Any word that can be deleted without loss? Delete it (Orwell 3).
+- Any foreign phrase, scientific word, or jargon with an everyday equivalent? Swap it (Orwell 5).
 
 ---
 
@@ -543,6 +564,14 @@ If the user provided a writing sample at Stage 0, briefly note in the summary wh
 ## Final Quality Gate (combines both halves)
 
 Before delivering, the rewrite must satisfy ALL of these:
+
+**Orwell's six rules (mandatory — a failure here blocks delivery regardless of score):**
+- [ ] No stock metaphors or figures of speech familiar from print
+- [ ] No long word standing in for a short one
+- [ ] Every remaining word survives the delete test
+- [ ] Active voice throughout, except where active would distort the meaning
+- [ ] No foreign phrase, scientific word, or jargon with an everyday English equivalent
+- [ ] Any rule broken under rule 6 is named, with the reason, in the change summary
 
 **Removed (the "remove the tells" half):**
 - [ ] No items from the 29-pattern catalog survive

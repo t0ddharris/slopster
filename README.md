@@ -11,7 +11,7 @@ Slopster is a collection of lint rules, an AI coding agent skill, and a diff too
 ## What's in the box
 
 **Vale lint rules** (works immediately, no AI needed)
-Five YAML rules that plug into [Vale](https://vale.sh), the open-source prose linter. Run `vale your-file.md` and get line-by-line feedback:
+Six YAML rules that plug into [Vale](https://vale.sh), the open-source prose linter. Run `vale your-file.md` and get line-by-line feedback:
 
 | Rule | What it catches | Level |
 |------|----------------|-------|
@@ -20,9 +20,10 @@ Five YAML rules that plug into [Vale](https://vale.sh), the open-source prose li
 | `JargonSwaps` | 25+ word substitutions: `utilize` -> `use`, `leverage` -> `use`, `facilitate` -> `help` | Error |
 | `WeakWords` | Filler and hedge words: `very`, `basically`, `furthermore`, `at its core` | Warning |
 | `EmDash` | More than 3 em dashes per document (LLMs overuse them) | Warning |
+| `Orwell` | Dying metaphors (`low-hanging fruit`, `silver bullet`) and foreign phrases (`de facto`, `vis-à-vis`) | Error |
 
 **[Tagore](https://github.com/apurvrdx1/tagore) skill** (for Claude Code, Codex, Cursor, Windsurf, and other AI coding agents)
-A 29-pattern detection catalog combined with an 8-dimension scoring rubric. Goes deeper than lint: it scores prose on directness, rhythm, trust, authenticity, density, specificity, restraint, and voice. Fails anything below 56/80. Built from [humanizer](https://github.com/blader/humanizer) by blader and [stop-slop](https://github.com/hardikpandya/stop-slop) by Hardik Pandya.
+A 29-pattern detection catalog combined with an 8-dimension scoring rubric. Goes deeper than lint: it scores prose on directness, rhythm, trust, authenticity, density, specificity, restraint, and voice. Fails anything below 56/80. On top of that it enforces [Orwell's six rules](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/) as a mandatory gate: no stock metaphors, no long word where a short one works, cut every word you can, active voice, plain English, and break any of those only to avoid saying something barbarous. Nothing ships without clearing all six. Built from [humanizer](https://github.com/blader/humanizer) by blader and [stop-slop](https://github.com/hardikpandya/stop-slop) by Hardik Pandya.
 
 **slop-diff** (CI/branch-level detection)
 A TypeScript script that compares your branch against main and reports only *new* slop findings. Ignores line-number shifts so refactoring doesn't create false positives. Requires [Bun](https://bun.sh) and [slop-scan](https://www.npmjs.com/package/slop-scan).
